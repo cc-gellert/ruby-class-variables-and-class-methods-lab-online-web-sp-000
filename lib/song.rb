@@ -48,5 +48,11 @@ class Song
     histo 
   end 
   def self.artist_count
+    aHisto = {} 
+    @@artist.each do |singer|
+      aHisto[singer] ||= 0 
+      aHisto[singer] += 1 
+    end 
+    aHisto 
   end 
 end 
