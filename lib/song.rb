@@ -14,7 +14,10 @@ class Song
   end 
   @@genres = [] 
   def self.genres
-    @@genres 
+    uniqueG = [] 
+    @@genres.each do |song|
+      if uniqueG.include?(song)
+        
   end 
   @@artists = [] 
   def self.artists 
