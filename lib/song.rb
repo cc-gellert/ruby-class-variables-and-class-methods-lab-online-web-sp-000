@@ -42,7 +42,7 @@ class Song
   def self.genre_count
     histo = {} 
       @@genres.each do |genre| 
-      histo[genre]||= [] 
+      histo[genre]||= 0
       histo[genre] += 1 
     end 
     histo 
