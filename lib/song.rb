@@ -16,8 +16,11 @@ class Song
   def self.genres
     uniqueG = [] 
     @@genres.each do |song|
-      if uniqueG.include?(song)
-        
+      if !uniqueG.include?(song)
+        uniqueG << song 
+      end 
+    end 
+    uniqueG 
   end 
   @@artists = [] 
   def self.artists 
