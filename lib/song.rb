@@ -20,15 +20,16 @@ class Song
   
   def self.genres
     uniqueG = [] 
-    @@genres.each do |song|
-      if !uniqueG.include?(song)
-        uniqueG << song 
+    @@genres.each do |type|
+      if !uniqueG.include?(type)
+        uniqueG << type  
       end 
     end 
     uniqueG 
   end 
   
   @@artists = [] 
+  
   def self.artists 
     uniqueA = [] 
     @@artists.each do |singer|
@@ -39,7 +40,10 @@ class Song
     uniqueA 
   end
   def self.genre_count
-    
+    histo = {} 
+    @@genres.map do |genre| 
+    histo[type]||= [] 
+    histo[type] += 1 
   end 
   def self.artist_count
   end 
