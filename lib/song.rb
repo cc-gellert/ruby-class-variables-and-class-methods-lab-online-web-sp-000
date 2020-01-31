@@ -41,9 +41,10 @@ class Song
   end
   def self.genre_count
     histo = {} 
-    @@genres.map do |genre| 
-    histo[type]||= [] 
-    histo[type] += 1 
+      @@genres.map do |genre| 
+      histo[type]||= [] 
+      histo[type] += 1 
+    end 
   end 
   def self.artist_count
   end 
